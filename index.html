@@ -1,3 +1,115 @@
 ---
 layout: default
+hero-banner:
+  type: full
+  image: '/images/jempinis-12-1.jpg'
+  top-text: Welcome to
+  heading: The Yoga Studio
+  description:
+  button-text:
+  button-color:
+opening-section:
+  image: '/images/jempinis-12-2.jpg'
+  alt-text: yoga girl
+  heading: duis aute irure
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore hic ipsum, obcaecati culpa voluptatem ducimus placeat ut consequatur vel iusto voluptates id consequuntur praesentium earum non quis dolores sint?
+  link-text: read more
+second-section:
+  image: '/images/jempinis-12-3.jpg'
+  alt-text: relax girl
+  heading: our classes
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore hic ipsum, obcaecati culpa voluptatem ducimus placeat ut consequatur vel iusto voluptates id consequuntur praesentium earum non quis dolores sint?
+  link-text: find out more
+small-classes:
+  - heading: bikram yoga
+    description:  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore hic ipsum, obcaecati culpa voluptatem ducimus placeat ut consequatur vel iusto 
+  - heading: bikram yoga
+    description:  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore hic ipsum, obcaecati culpa voluptatem ducimus placeat ut consequatur vel iusto 
+  - heading: bikram yoga
+    description:  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore hic ipsum, obcaecati culpa voluptatem ducimus placeat ut consequatur vel iusto 
+  - heading: bikram yoga
+    description:  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore hic ipsum, obcaecati culpa voluptatem ducimus placeat ut consequatur vel iusto 
+testimonials:
+  - image: '/images/jempinis-12-4.jpg'
+    name: Malin
+    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore hic ipsum, obcaecati culpa voluptatem ducimus placeat ut consequatur vel iusto voluptates id consequuntur praesentium earum non quis dolores sint?
+    testimonial:
+  - image: '/images/jempinis-12-5.jpg'
+    name: Louise
+    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore hic ipsum, obcaecati culpa voluptatem ducimus placeat ut consequatur vel iusto voluptates id consequuntur praesentium earum non quis dolores sint?
+    testimonial:
+  - image: '/images/jempinis-12-6.jpg'
+    name: Johanna
+    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore hic ipsum, obcaecati culpa voluptatem ducimus placeat ut consequatur vel iusto voluptates id consequuntur praesentium earum non quis dolores sint?
+seo:
+  title: yoga studio
+  description: "your description goes here"
+  keywords: "your, keywords, go, here"
+  social_image: "path/to/social/image.jpg"
+  hide-from-google: false
 ---
+<!---------- opening section  ------------->
+<section class=" grid grid-cols-4 text-main-color bg-main-color gap-[1px] p-[1px]">
+  <div class="max-w-screen-2x p-15p pl-5p min-h-screen flex items-end col-span-2 bg-second-color">
+    <div class="">
+      <h2 class="capitalize font-poppins tracking-widest text-6xl mb-5"> {{ page.opening-section.heading }} </h2>
+      <p class="mb-5"> {{ page.opening-section.description }}</p>
+      <a href="#" class="inline-block bg-main-color px-8 py-2 uppercase text-second-color mb-5"> {{ page.opening-section.link-text }} </a>
+    </div>
+  </div>
+    <div class=" fancy-image-parent p-25p col-span-2">
+      <img src="{{ page.opening-section.image }}" alt="{{page.opening-section.alt-text}}" class="">
+    </div>
+
+  </div>
+
+    <div class=" fancy-image-parent bg-second-color min-h-screen pt-75p col-span-2 row-span-2">
+      <img src="{{ page.second-section.image }}" alt="{{page.second-section.alt-text}}" class="">
+        <div class=" text-white p-15p pl-5p">
+          <h2 class="mb-5 font-serif text-6xl"> {{ page.second-section.heading }} </h2>
+          <p class="mb-5"> {{ page.second-section.description }}</p>
+          <a href="#" class="inline-block bg-main-color px-8 py-2 uppercase text-second-color mb-5"> {{ page.second-section.link-text }} </a>
+        </div>
+      </div>
+
+    <!-- column 2  --> 
+       {% for item in page.small-classes %}
+       <div class="p-5p bg-second-color flex items-end">
+        <div class="">
+          <h3> {{ item.heading }} </h3>
+          <p> {{ item.description }} </p>
+        </div>
+       </div>
+   
+      {% endfor %}
+</section>
+
+<!-- testimonial section  -->
+<section class="p-10p bg-second-color text-main-color ">
+
+  <h2 class="capitalize font-serif text-4xl pl-0 p-5"> testimonials</h2>
+
+    <div class=" max-w-screen-2xl grid grid-cols-3 gap-5">
+
+
+    
+    {% for item in page.testimonials limit:3 %}
+
+      <div class="text-center">
+        
+        <div class="bg-cover bg-center border border-main-color" style="background-image: url('{{ item.image }}'); aspect-ratio:{{ include.aspect | default: '1' }};">
+        </div>
+        <div class="p-5">
+          <h4 class="uppercase mb-5 border-b border-main-color p-5 font-poppins"> {{ item.name }} </h4>
+          <p class="mb-5"> {{ item.description }} </p>
+        </div>
+
+      </div>
+
+    {% endfor %}
+
+  </div>
+</section>
+
+
+   
