@@ -1,27 +1,32 @@
-<header class=" px-5p text-main-color bg-second-color relative " > 
+<header class=" px-5p text-main-color bg-second-color relative border-b border-main-color " > 
 
     <div class="bg-cover bg-center absolute {% if page.hero-banner.type == 'full' %} inset-0 {% else %} inset-y-0 right-0 left-1/3 {% endif %}"  style="background-image: url('{{ page.hero-banner.image}}'); background-position: {{ page.hero-banner.position  }}">
 
     </div>
-    <div class="flex flex-col max-w-screen-2xl mx-auto min-h-80 relative ">
+    <div class="flex flex-col  min-h-80 relative">
         <div class="flex justify-between p-5">
             
             <a href="/index.html"> logo </a>
             <nav class="flex gap-4 uppercase">
                 <a href="/classes.html"> our classes </a>
-                <a href="/schedule.html"> schedual </a>
+                <a href="/schedule.html"> schedule </a>
                 <a href="/contact.html"> contact </a>
             </nav>
         </div>
-    
-        <div class="flex items-center grow">
-            <div class="">
+           <div class="flex items-center grow w-full">
+
+           
+             
+               <div class=" w-full">
+                <div class="border-t border-main-color w-1/3 -ml-[7%] pb-5 -mt-5"> 
+                    <!-- this is my little border -->
+                </div> 
                 {% if page.hero-banner.top-text  %}   
                 <span> {{page.hero-banner.top-text}} </span>
                
                 {% endif %}
             
-                <h1 class="text-8xl"> {{ page.hero-banner.heading}} </h1>
+                <h1 class="text-8xl font-serif"> {{ page.hero-banner.heading}} </h1>
                 <p class="max-w-[50%]"> {{ page.hero-banner.description }}</p>
             
                 {% if page.hero-banner.button-url  %} 

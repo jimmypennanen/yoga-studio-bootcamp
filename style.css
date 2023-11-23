@@ -35,10 +35,23 @@ html {
     @apply hidden
   }
   
-  #momence-embed #momence-plugin-host-schedule img * {
+  #momence-embed #momence-plugin-host-schedule .jQbyba  {
     @apply hidden
   }
   
-  #momence-embed #momence-plugin-host-schedule * {
-    @apply hover:bg-main-color hover:text-second-color
+  #momence-embed #momence-plugin-host-schedule .EenGE  {
+    @apply bg-main-color text-second-color
+  }
+
+  /* #momence-embed #momence-plugin-host-schedule .kJTgQj,
+  #momence-embed #momence-plugin-host-schedule .eyVeLy,
+  #momence-embed #momence-plugin-host-schedule .igpvGC */
+  #momence-embed #momence-plugin-host-schedule :is(.eyVeLy,.igpvGC,.kJTgQj,.dMmeKq,.kSZlqf,.bIbgHD)
+
+   {
+    @apply hidden
+  }
+
+  #momence-embed #momence-plugin-host-schedule :is(.henUQy,.kKtlJb) {
+    @apply font-serif text-2xl
   }
