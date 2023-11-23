@@ -30,15 +30,13 @@ small-classes:
   - heading: bikram yoga
     description:  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore hic ipsum, obcaecati culpa voluptatem ducimus placeat ut consequatur vel iusto 
 testimonials:
-  - image: '/images/jempinis-12-4.jpg'
+  - image: '/images/jempinis-12-12.jpg'
     name: Malin
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore hic ipsum, obcaecati culpa voluptatem ducimus placeat ut consequatur vel iusto voluptates id consequuntur praesentium earum non quis dolores sint?
-    testimonial:
-  - image: '/images/jempinis-12-5.jpg'
+  - image: '/images/jempinis-12-10.jpg'
     name: Louise
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore hic ipsum, obcaecati culpa voluptatem ducimus placeat ut consequatur vel iusto voluptates id consequuntur praesentium earum non quis dolores sint?
-    testimonial:
-  - image: '/images/jempinis-12-6.jpg'
+  - image: '/images/jempinis-12-11.jpg'
     name: Johanna
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore hic ipsum, obcaecati culpa voluptatem ducimus placeat ut consequatur vel iusto voluptates id consequuntur praesentium earum non quis dolores sint?
 seo:
@@ -75,9 +73,9 @@ seo:
     <!-- column 2  --> 
        {% for item in page.small-classes %}
        <div class="p-5p bg-second-color flex items-end">
-        <div class="">
-          <h3> {{ item.heading }} </h3>
-          <p> {{ item.description }} </p>
+        <div class="p-5">
+          <h3 class="capitalize text-2xl mb-3"> {{ item.heading }} </h3>
+          <p class="text-small"> {{ item.description }} </p>
         </div>
        </div>
    

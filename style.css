@@ -23,4 +23,22 @@ html {
   .fancy-image-parent > div {
     @apply relative z-10
   }
+
 }
+
+  /* Background  */
+  #momence-embed #momence-plugin-host-schedule * {
+    @apply bg-second-color text-main-color font-sans font-light rounded-none border-main-color
+  }
+  
+  #momence-embed #momence-plugin-host-schedule svg * {
+    @apply hidden
+  }
+  
+  #momence-embed #momence-plugin-host-schedule img * {
+    @apply hidden
+  }
+  
+  #momence-embed #momence-plugin-host-schedule * {
+    @apply hover:bg-main-color hover:text-second-color
+  }
