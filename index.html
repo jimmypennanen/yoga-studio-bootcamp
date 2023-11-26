@@ -47,21 +47,20 @@ seo:
   hide-from-google: false
 ---
 <!---------- opening section  ------------->
-<section class=" grid grid-cols-4 text-main-color bg-main-color gap-[1px] p-[1px]">
-  <div class="max-w-screen-2x p-15p pl-5p min-h-screen flex items-end col-span-2 bg-second-color">
+<section class=" grid grid-cols-2 md:grid-cols-4 text-main-color bg-main-color gap-[1px] p-[1px]">
+  <div class="max-w-screen-2x p-15p min-h-50 md:min-h-screen flex items-end col-span-2 bg-second-color">
     <div class="">
-      <h2 class="capitalize font-poppins tracking-widest text-6xl mb-5"> {{ page.opening-section.heading }} </h2>
+      <h2 class="font-serif capitalize tracking-widest text-4xl md:text-6xl mb-5"> {{ page.opening-section.heading }} </h2>
       <p class="mb-5"> {{ page.opening-section.description }}</p>
-      <a href="#" class="inline-block bg-main-color px-8 py-2 uppercase text-second-color mb-5"> {{ page.opening-section.link-text }} </a>
+      <a href="#" class="inline-block bg-main-color px-8 py-2 uppercase text-second-color mb-5"> {{ page.opening-section.link-text }} </a> 
     </div>
   </div>
-    <div class=" fancy-image-parent p-25p col-span-2">
+    <div class=" fancy-image-parent p-25p col-span-2 hidden md:block">
       <img src="{{ page.opening-section.image }}" alt="{{page.opening-section.alt-text}}" class="">
     </div>
-
-  </div>
-
-    <div class=" fancy-image-parent bg-second-color min-h-screen pt-75p col-span-2 row-span-2">
+<!---------- second part of opening section  ---------->
+    <!-- needs a row-span-2 to take up its space V and H -->
+    <div class=" fancy-image-parent bg-second-color pt-[40%] md:pt-75p col-span-2 row-span-2">
       <img src="{{ page.second-section.image }}" alt="{{page.second-section.alt-text}}" class="">
         <div class=" text-white p-15p pl-5p">
           <h2 class="mb-5 font-serif text-6xl"> {{ page.second-section.heading }} </h2>
@@ -70,9 +69,9 @@ seo:
         </div>
       </div>
 
-    <!-- column 2  --> 
+    <!-- 4 cols small classes grid  --> 
        {% for item in page.small-classes %}
-       <div class="p-5p bg-second-color flex items-end">
+       <div class="p-5p bg-second-color flex items-end ">
         <div class="p-5">
           <h3 class="capitalize text-2xl mb-3"> {{ item.heading }} </h3>
           <p class="text-small"> {{ item.description }} </p>
@@ -82,12 +81,12 @@ seo:
       {% endfor %}
 </section>
 
-<!-- testimonial section  -->
-<section class="p-10p bg-second-color text-main-color ">
+<!-----------testimonial section  ----------->
+<section class="p-10p bg-second-color text-main-color  ">
 
-  <h2 class="capitalize font-serif text-4xl pl-0 p-5"> testimonials</h2>
+  <h2 class="capitalize font-serif text-4xl pl-0 p-5 text-center md:text-left"> testimonials </h2>
 
-    <div class=" max-w-screen-2xl grid grid-cols-3 gap-5">
+    <div class=" max-w-sm mx-auto md:max-w-screen-2xl grid md:grid-cols-3 gap-5">
 
 
     
@@ -95,7 +94,7 @@ seo:
 
       <div class="text-center">
         
-        <div class="bg-cover bg-center border border-main-color" style="background-image: url('{{ item.image }}'); aspect-ratio:{{ include.aspect | default: '1' }};">
+        <div class="bg-cover border border-main-color" style="background-image: url('{{ item.image }}'); aspect-ratio: {{ include.aspect | default: '1' }}; ">
         </div>
         <div class="p-5">
           <h4 class="uppercase mb-5 border-b border-main-color p-5 font-poppins"> {{ item.name }} </h4>
